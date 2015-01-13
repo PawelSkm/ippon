@@ -16,7 +16,7 @@ public class Customer extends AbstractEntity {
 
 	@Column(length = 64)
     @NotEmpty
-	private String firstname = "John Doe";
+	private String firstname = "John De";
 
 	@Column(length = 64)
 	@NotEmpty
