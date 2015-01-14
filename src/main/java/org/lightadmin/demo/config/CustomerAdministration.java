@@ -30,14 +30,14 @@ public class CustomerAdministration extends AdministrationConfiguration<Customer
     public EntityMetadataConfigurationUnit configuration(EntityMetadataConfigurationUnitBuilder configurationBuilder) {
         return configurationBuilder
                 .nameField("firstname")
-                .singularName("Zawodnik")
-                .pluralName("Zawodnicy")
+                .singularName("Customer")
+                .pluralName("Customers")
                 .repositoryEventListener(SimpleRepositoryEventListener.class)
                 .build();
     }
 
     public ScreenContextConfigurationUnit screenContext(ScreenContextConfigurationUnitBuilder screenContextBuilder) {
-        return screenContextBuilder.screenName("Zarządzaj zawodnikami").build();
+        return screenContextBuilder.screenName("Customers managements").build();
     }
 
     public FieldSetConfigurationUnit listView(final FieldSetConfigurationUnitBuilder fragmentBuilder) {

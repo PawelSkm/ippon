@@ -11,5 +11,6 @@
 		<class>org.lightadmin.demo.model.Order</class>
 		<class>org.lightadmin.demo.model.LineItem</class>
 		<class>org.lightadmin.demo.model.DiscountProgram</class>
+		<class>org.lightadmin.demo.model.Fighter</class>
 	</persistence-unit>
 </persistence>
