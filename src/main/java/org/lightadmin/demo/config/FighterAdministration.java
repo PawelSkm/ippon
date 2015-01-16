@@ -45,14 +45,15 @@ public class FighterAdministration extends AdministrationConfiguration<Fighter> 
 	public FieldSetConfigurationUnit listView(
 			final FieldSetConfigurationUnitBuilder fragmentBuilder) {
 		return fragmentBuilder
-				.field("id")
-				.caption("Lp.")
+				.field("id").caption("Lp.")
 				// .field("avatar").caption("Avatar")
-				.field("firstname").caption("Imię").field("lastname")
-				.caption("Nazwisko").field("dateOfBirth")
-				.caption("Data Urodzenia").field("grade").caption("Stopień")
-				.field("emailAddress").caption("Email").field("address")
-				.caption("Adres").field("district").caption("Dzielnica")
+				.field("firstname").caption("Imię")
+				.field("lastname").caption("Nazwisko")
+				.field("dateOfBirth").caption("Data Urodzenia")
+				.field("grade").caption("Stopień")
+				.field("emailAddress").caption("Email")
+				.field("address").caption("Adres")
+				.field("district").caption("Dzielnica")
 				.build();
 	}
 
@@ -80,15 +81,12 @@ public class FighterAdministration extends AdministrationConfiguration<Fighter> 
 				.caption("Nazwisko").field("dateOfBirth")
 				.caption("Data Urodzenia").field("grade").caption("Stopień")
 				.field("emailAddress").caption("Email").field("address")
-				.caption("Adres").field("district").caption("Dzielnica")
-				.build();
+				.caption("Adres").field("district").caption("Dzielnica").build();
 	}
 
 	public FieldSetConfigurationUnit formView(
 			final PersistentFieldSetConfigurationUnitBuilder fragmentBuilder) {
 		return fragmentBuilder
-				.field("id")
-				.caption("Lp.")
 				// .field("avatar").caption("Avatar")
 				.field("firstname").caption("Imię").field("lastname")
 				.caption("Nazwisko").field("dateOfBirth")

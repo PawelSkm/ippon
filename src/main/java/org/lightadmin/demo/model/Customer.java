@@ -4,7 +4,6 @@ import org.hibernate.annotations.Type;
 import org.hibernate.validator.constraints.NotEmpty;
 import org.joda.time.DateTime;
 import org.joda.time.LocalDate;
-import org.joda.time.LocalDateTime;
 import org.lightadmin.api.config.annotation.FileReference;
 import org.springframework.util.Assert;
 

@@ -47,10 +47,66 @@ public class Fighter extends AbstractEntity {
 		Assert.hasText( firstname );
 		Assert.hasText( lastname );
 
-		this.firstname = firstname;
-		this.lastname = lastname;
+		this.setFirstname(firstname);
+		this.setLastname(lastname);
 	}
 
 	public Fighter() {
+	}
+
+	public String getFirstname() {
+		return firstname;
+	}
+
+	public void setFirstname(String firstname) {
+		this.firstname = firstname;
+	}
+
+	public String getLastname() {
+		return lastname;
+	}
+
+	public void setLastname(String lastname) {
+		this.lastname = lastname;
+	}
+
+	public LocalDate getDateOfBirth() {
+		return dateOfBirth;
+	}
+
+	public void setDateOfBirth(LocalDate dateOfBirth) {
+		this.dateOfBirth = dateOfBirth;
+	}
+
+	public String getAddress() {
+		return address;
+	}
+
+	public void setAddress(String address) {
+		this.address = address;
+	}
+
+	public String getDistrict() {
+		return district;
+	}
+
+	public void setDistrict(String district) {
+		this.district = district;
+	}
+
+	public String getGrade() {
+		return grade;
+	}
+
+	public void setGrade(String grade) {
+		this.grade = grade;
+	}
+
+	public EmailAddress getEmailAddress() {
+		return emailAddress;
+	}
+
+	public void setEmailAddress(EmailAddress emailAddress) {
+		this.emailAddress = emailAddress;
 	}
 }

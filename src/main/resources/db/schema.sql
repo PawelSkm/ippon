@@ -1,7 +1,7 @@
 CREATE TABLE customer (id BIGINT IDENTITY PRIMARY KEY, firstname VARCHAR(255), lastname VARCHAR(255), email VARCHAR(255), reg_date DATE, REG_DATE_TIME TIMESTAMP, AVATAR_FILE_URL VARCHAR(255));
 CREATE UNIQUE INDEX ix_customer_email ON CUSTOMER (email ASC);
 
-CREATE TABLE fighter (id BIGINT IDENTITY PRIMARY KEY, firstname VARCHAR(255), lastname VARCHAR(255), emailAddress VARCHAR(255), reg_date DATE, address VARCHAR(255), district VARCHAR(255), grade VARCHAR(255), fight VARCHAR(255));
+CREATE TABLE fighter (id BIGINT IDENTITY PRIMARY KEY, firstname VARCHAR(255), lastname VARCHAR(255), email VARCHAR(255), reg_date DATE, address VARCHAR(255), district VARCHAR(255), grade VARCHAR(255), fight VARCHAR(255));
 
 CREATE TABLE address (id BIGINT IDENTITY PRIMARY KEY, customer_id BIGINT CONSTRAINT address_customer_ref REFERENCES customer (id), street VARCHAR(255), city VARCHAR(255), country VARCHAR(255));
 
