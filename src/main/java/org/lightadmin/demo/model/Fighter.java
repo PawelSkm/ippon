@@ -29,10 +29,19 @@ public class Fighter extends AbstractEntity {
 	private String address;
     
     @Column
+    private String parentsPhone;
+    
+    @Column
     private String district;
 
     @Column
     private String grade;
+    
+    @Column
+    private String parentsName;
+    
+    @Column
+    private String fights;
 
     //TODO: add avatar as blob
 //    @Column(name = "AVATAR_FILE_URL")
@@ -108,5 +117,29 @@ public class Fighter extends AbstractEntity {
 
 	public void setEmailAddress(EmailAddress emailAddress) {
 		this.emailAddress = emailAddress;
+	}
+
+	public String getParentsName() {
+		return parentsName;
+	}
+
+	public void setParentsName(String parentsName) {
+		this.parentsName = parentsName;
+	}
+
+	public String getFights() {
+		return fights;
+	}
+
+	public void setFights(String fights) {
+		this.fights = fights;
+	}
+
+	public String getParentsPhone() {
+		return parentsPhone;
+	}
+
+	public void setParentsPhone(String parentsPhone) {
+		this.parentsPhone = parentsPhone;
 	}
 }

@@ -2,12 +2,8 @@ package org.lightadmin.demo.config;
 
 import static org.lightadmin.api.config.utils.FilterMetadataUtils.filter;
 import static org.lightadmin.api.config.utils.ScopeMetadataUtils.all;
-import static org.lightadmin.api.config.utils.ScopeMetadataUtils.specification;
-
-import javax.persistence.criteria.CriteriaBuilder;
-import javax.persistence.criteria.CriteriaQuery;
-import javax.persistence.criteria.Predicate;
-import javax.persistence.criteria.Root;
+import static org.lightadmin.api.config.utils.Editors.textArea;
+import static org.lightadmin.api.config.utils.EnumElement.element;
 
 import org.lightadmin.api.config.AdministrationConfiguration;
 import org.lightadmin.api.config.builder.EntityMetadataConfigurationUnitBuilder;
@@ -21,7 +17,6 @@ import org.lightadmin.api.config.unit.FieldSetConfigurationUnit;
 import org.lightadmin.api.config.unit.FiltersConfigurationUnit;
 import org.lightadmin.api.config.unit.ScopesConfigurationUnit;
 import org.lightadmin.api.config.unit.ScreenContextConfigurationUnit;
-import org.lightadmin.api.config.utils.DomainTypeSpecification;
 import org.lightadmin.demo.model.Fighter;
 
 public class FighterAdministration extends AdministrationConfiguration<Fighter> {
@@ -34,6 +29,12 @@ public class FighterAdministration extends AdministrationConfiguration<Fighter> 
 			EntityMetadataConfigurationUnitBuilder configurationBuilder) {
 		return configurationBuilder.singularName(FIGHTER).pluralName(FIGHTERS)
 		// .repositoryEventListener(SimpleRepositoryEventListener.class)
+				.field("district").enumeration(
+                        element("1", "1"),
+                        element("2", "2"),
+                        element("3", "3"),
+                        element("4", "4"),
+                        element("poza Rybnikiem", "poza Rybnikiem"))
 				.build();
 	}
 
@@ -51,7 +52,6 @@ public class FighterAdministration extends AdministrationConfiguration<Fighter> 
 				.field("lastname").caption("Nazwisko")
 				.field("dateOfBirth").caption("Data Urodzenia")
 				.field("grade").caption("Stopień")
-				.field("emailAddress").caption("Email")
 				.field("address").caption("Adres")
 				.field("district").caption("Dzielnica")
 				.build();
@@ -63,36 +63,51 @@ public class FighterAdministration extends AdministrationConfiguration<Fighter> 
 				.field("id")
 				.caption("Lp.")
 				// .field("avatar").caption("Avatar")
-				.field("firstname").caption("Imię").field("lastname")
-				.caption("Nazwisko").field("dateOfBirth")
-				.caption("Data Urodzenia").field("grade").caption("Stopień")
-				.field("emailAddress").caption("Email").field("address")
-				.caption("Adres").field("district").caption("Dzielnica")
+				.field("firstname").caption("Imię")
+				.field("lastname").caption("Nazwisko")
+				.field("dateOfBirth").caption("Data Urodzenia")
+				.field("parentsName").caption("Rodzice")
+				.field("parentsPhone").caption("Telefon rodziców")
+				.field("grade").caption("Stopień")
+				.field("emailAddress").caption("Email")
+				.field("address").caption("Adres")
+				.field("district").caption("Dzielnica")
+				.field("fights").caption("Walki")
 				.build();
 	}
 
 	public FieldSetConfigurationUnit showView(
 			final FieldSetConfigurationUnitBuilder fragmentBuilder) {
 		return fragmentBuilder
-				.field("id")
-				.caption("Lp.")
+				.field("id").caption("Lp.")
 				// .field("avatar").caption("Avatar")
-				.field("firstname").caption("Imię").field("lastname")
-				.caption("Nazwisko").field("dateOfBirth")
-				.caption("Data Urodzenia").field("grade").caption("Stopień")
-				.field("emailAddress").caption("Email").field("address")
-				.caption("Adres").field("district").caption("Dzielnica").build();
+				.field("firstname").caption("Imię")
+				.field("lastname").caption("Nazwisko")
+				.field("dateOfBirth").caption("Data Urodzenia")
+				.field("parentsName").caption("Rodzice")
+				.field("parentsPhone").caption("Telefon rodziców")
+				.field("grade").caption("Stopień")
+				.field("emailAddress").caption("Email")
+				.field("address").caption("Adres")
+				.field("district").caption("Dzielnica")
+				.field("fights").caption("Walki")
+				.build();
 	}
 
 	public FieldSetConfigurationUnit formView(
 			final PersistentFieldSetConfigurationUnitBuilder fragmentBuilder) {
 		return fragmentBuilder
 				// .field("avatar").caption("Avatar")
-				.field("firstname").caption("Imię").field("lastname")
-				.caption("Nazwisko").field("dateOfBirth")
-				.caption("Data Urodzenia").field("grade").caption("Stopień")
-				.field("emailAddress").caption("Email").field("address")
-				.caption("Adres").field("district").caption("Dzielnica")
+				.field("firstname").caption("Imię")
+				.field("lastname").caption("Nazwisko")
+				.field("dateOfBirth").caption("Data Urodzenia")
+				.field("parentsName").caption("Rodzice")
+				.field("parentsPhone").caption("Telefon rodziców")
+				.field("grade").caption("Stopień")
+				.field("emailAddress").caption("Email")
+				.field("address").caption("Adres")
+				.field("district").caption("Dzielnica")
+				.field("fights").caption("Walki").editor(textArea())
 				.build();
 	}
 
@@ -113,8 +128,7 @@ public class FighterAdministration extends AdministrationConfiguration<Fighter> 
 						// .field("avatar").caption("Avatar")
 						filter().field("firstname").caption("Imię").build(),
 						filter().field("lastname").caption("Nazwisko").build(),
-						filter().field("dateOfBirth").caption("Data Urodzenia")
-								.build(),
+						filter().field("dateOfBirth").caption("Data Urodzenia").build(),
 						filter().field("grade").caption("Stopień").build(),
 						filter().field("emailAddress").caption("Email").build(),
 						filter().field("address").caption("Adres").build(),

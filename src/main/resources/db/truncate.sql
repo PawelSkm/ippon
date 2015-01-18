@@ -4,6 +4,7 @@ TRUNCATE TABLE Address;
 TRUNCATE TABLE customer_discount;
 TRUNCATE TABLE DiscountProgram;
 TRUNCATE TABLE Customer;
+TRUNCATE TABLE Fighter;
 TRUNCATE TABLE Product_Attributes;
 TRUNCATE TABLE Product;
 TRUNCATE TABLE FilterTestEntity;
