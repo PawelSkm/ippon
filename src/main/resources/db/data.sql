@@ -11,6 +11,9 @@ insert into Customer (id, email, firstname, lastname, reg_date) values (10, 'tol
 insert into Customer (id, email, firstname, lastname, reg_date) values (11, 'sasha@dmband11.com', 'Sasha', 'Eleven', DATE '2002-04-03');
 insert into Customer (id, email, firstname, lastname, reg_date) values (12, 'pasha@dmband12.com', 'Pasha', 'Twelve', DATE '2003-04-03');
 
+insert into Fighter (id, firstname, lastname, emailAddress, reg_date, address, district, grade, parentsName, parentsPhone, fights) values (1, 'Marta', 'Skiścim', 'marta.kwlczk@gmail.com',  DATE '1986-03-27', 'św. Maksymiliana 23a/5', '3', 'black_belt', 'Jolanta, Juliusz Kowalczyk', '654234543, 678876678', 'https://www.youtube.com/watch?v=_QddY9RY-7E \nhttps://www.youtube.com/watch?v=jumpIxk3KVM ');
+insert into Fighter (id, firstname, lastname, emailAddress, reg_date, address, district, grade, parentsName, parentsPhone, fights) values (2, 'Paweł', 'Skiścim', 'pawelskiscim@gmail.com',  DATE '1986-05-21', 'Kosmonautów 4/34', '1', '', 'Elżbieta, Jerzy Skiścim', '654234543, 678876678', 'https://www.youtube.com/watch?v=C0qQKvUHPqE \nhttps://www.youtube.com/watch?v=jumpIxk3KVM ');
+
 insert into Address (id, street, city, country, customer_id) values (1, 'New York', 'New York', 'United States', 1);
 insert into Address (id, street, city, country, customer_id) values (2, 'London', 'London', 'England', 1);
 insert into Address (id, street, city, country, customer_id) values (3, 'Kiev', 'Kiev', 'Ukraine', 2);

@@ -17,8 +17,8 @@ public class Fighter extends AbstractEntity {
 	@Column
 	private String lastname;
 
-    @Embedded    
-	private EmailAddress emailAddress;
+    @Column 
+	private String emailAddress;
 
     //TODO: adjust it properly
     @Column(name = "REG_DATE")
@@ -48,9 +48,6 @@ public class Fighter extends AbstractEntity {
 //    @FileReference(baseDirectory = "D:\\deleteMe\\lightadmin-demo")
 //    private String avatar;
 
-    //TODO walki zmienic na konkretne encje
-    @Column
-    private String fight;
     
 	public Fighter( String firstname, String lastname ) {
 		Assert.hasText( firstname );
@@ -111,11 +108,11 @@ public class Fighter extends AbstractEntity {
 		this.grade = grade;
 	}
 
-	public EmailAddress getEmailAddress() {
+	public String getEmailAddress() {
 		return emailAddress;
 	}
 
-	public void setEmailAddress(EmailAddress emailAddress) {
+	public void setEmailAddress(String emailAddress) {
 		this.emailAddress = emailAddress;
 	}
 
