@@ -13,6 +13,7 @@ D:\projekty\light-admin-master\lightadmin-sandbox\src\main\java\org\lightadmin\t
 D:\projekty\light-admin-master\lightadmin-sandbox\src\main\java\org\lightadmin\test\nameExtractor\LineItemNameExtractor.java
 D:\projekty\light-admin-master\lightadmin-sandbox\src\main\java\org\lightadmin\demo\config\DiscountProgramAdministration.java
 D:\projekty\light-admin-master\lightadmin-sandbox\src\main\java\org\lightadmin\demo\config\ProductAdministration.java
+D:\projekty\light-admin-master\lightadmin-sandbox\src\main\java\org\lightadmin\demo\config\FighterAdministration.java
 D:\projekty\light-admin-master\lightadmin-sandbox\src\main\java\org\lightadmin\test\model\TestLineItem.java
 D:\projekty\light-admin-master\lightadmin-sandbox\src\main\java\org\lightadmin\test\model\TestAddress.java
 D:\projekty\light-admin-master\lightadmin-sandbox\src\main\java\org\lightadmin\demo\config\OrderAdministration.java
@@ -36,4 +37,5 @@ D:\projekty\light-admin-master\lightadmin-sandbox\src\main\java\org\lightadmin\d
 D:\projekty\light-admin-master\lightadmin-sandbox\src\main\java\org\lightadmin\demo\model\EmailAddress.java
 D:\projekty\light-admin-master\lightadmin-sandbox\src\main\java\org\lightadmin\demo\model\Order.java
 D:\projekty\light-admin-master\lightadmin-sandbox\src\main\java\org\lightadmin\demo\config\DashboardConfiguration.java
+D:\projekty\light-admin-master\lightadmin-sandbox\src\main\java\org\lightadmin\demo\model\Fighter.java
 D:\projekty\light-admin-master\lightadmin-sandbox\src\main\java\org\lightadmin\demo\model\ProductType.java
