@@ -1,1 +1,1 @@
-CREATE TABLE fighter (id BIGINT IDENTITY PRIMARY KEY, firstname VARCHAR(255), lastname VARCHAR(255), emailAddress VARCHAR(255), reg_date DATE, address VARCHAR(255), district VARCHAR(255), grade VARCHAR(255), parentsName VARCHAR(255), parentsPhone VARCHAR(255), fights VARCHAR(255));
+CREATE TABLE fighter (id BIGINT IDENTITY PRIMARY KEY, firstname VARCHAR(255), lastname VARCHAR(255), emailAddress VARCHAR(255), dateOfBirth DATE, address VARCHAR(255), district VARCHAR(255), grade VARCHAR(255), parentsName VARCHAR(255), parentsPhone VARCHAR(255), fights VARCHAR(255));

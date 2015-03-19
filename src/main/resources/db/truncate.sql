@@ -1,1 +1,1 @@
-TRUNCATE TABLE Fighter;
+--TRUNCATE TABLE Fighter;

@@ -1,16 +1,18 @@
 package com.ippon.model;
 
 import javax.persistence.Column;
-import javax.persistence.Embedded;
 import javax.persistence.Entity;
+import javax.persistence.Table;
+
 import org.hibernate.annotations.Type;
-import org.hibernate.validator.constraints.NotEmpty;
 import org.joda.time.LocalDate;
 import org.springframework.util.Assert;
 
 
 @Entity
+//@Table(name="fighter")
 public class Fighter extends AbstractEntity {
+	
 	@Column
 	private String firstname;
 
@@ -20,8 +22,6 @@ public class Fighter extends AbstractEntity {
     @Column 
 	private String emailAddress;
 
-    //TODO: adjust it properly
-    @Column(name = "REG_DATE")
     @Type(type="org.jadira.usertype.dateandtime.joda.PersistentLocalDate")
     private LocalDate dateOfBirth;
 
